@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Capstone OOTD</string>
+    <string name="app_name">OOTD</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Home</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -18,4 +18,20 @@
     <string name="profile_name">Alexandra</string>
     <string name="myprofile">My Profile</string>
     <string name="title_add">Add Clothes</string>
+    <string name="email">Alex11@gmail.com</string>
+    <string name="phone">0872536721</string>
+    <string name="quotes">\"Make Your Outfit Easily\"</string>
+    <string name="myoutfit">My Outfit</string>
+    <string name="outfit">Outfit</string>
+    <string name="jenis">jenis</string>
+    <string name="name">Name</string>
+    <string name="type">Type:</string>
+    <string name="category">category</string>
+    <string name="category1">Category:</string>
+    <string name="clother_color">Color</string>
+    <string name="Color">Color:</string>
+    <string name="delete_items">Delete Items</string>
+    <string name="delete_message">Do you want to delete the items?</string>
+    <string name="delete">Delete</string>
+    <string name="tpis">1. Take photos during the day or in\n        a bright room.\n2. Don’t have the same color\n       background as your item.\n3. Hang your items or lay them out\n       flat.\n4. Avoid other objects in the \n       background.</string>
 </resources>
