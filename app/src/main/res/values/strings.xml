@@ -34,4 +34,6 @@
     <string name="delete_message">Do you want to delete the items?</string>
     <string name="delete">Delete</string>
     <string name="tpis">1. Take photos during the day or in\n        a bright room.\n2. Don’t have the same color\n       background as your item.\n3. Hang your items or lay them out\n       flat.\n4. Avoid other objects in the \n       background.</string>
+    <string name="ootd_name">Name Ottd</string>
+    <string name="items">Items</string>
 </resources>
