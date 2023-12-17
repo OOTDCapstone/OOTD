@@ -22,7 +22,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardview"
+            android:id="@+id/cardview_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -40,7 +40,7 @@
                 android:padding="8dp">
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/tv_profile_photo"
                     android:layout_width="114dp"
                     android:layout_height="109dp"
                     app:layout_constraintBaseline_toBottomOf="parent"
@@ -49,15 +49,15 @@
                     tools:src="@tools:sample/avatars"/>
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/tv_name_profile"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="@string/profile_name"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@id/imageView5"
-                    app:layout_constraintTop_toTopOf="@id/imageView5"
+                    app:layout_constraintStart_toEndOf="@id/tv_profile_photo"
+                    app:layout_constraintTop_toTopOf="@id/tv_profile_photo"
                     app:layout_constraintEnd_toEndOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -75,6 +75,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_toDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -84,7 +85,7 @@
             android:backgroundTint="@color/purple_2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardview">
+            app:layout_constraintTop_toBottomOf="@id/cardview_profile">
 
             <LinearLayout
                 android:layout_width="match_parent"

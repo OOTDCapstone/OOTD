@@ -37,4 +37,7 @@
     <string name="ootd_name">Name Ottd</string>
     <string name="items">Items</string>
     <string name="add_foto">Add Images</string>
+    <string name="galery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="add_message">What Do You Want?</string>
 </resources>
