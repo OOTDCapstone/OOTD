@@ -40,4 +40,7 @@
     <string name="galery">Gallery</string>
     <string name="camera">Camera</string>
     <string name="add_message">What Do You Want?</string>
+    <string name="upload_foto">Upload Photo</string>
+    <string name="logout">Logout</string>
+    <string name="edit">Edit Profile</string>
 </resources>

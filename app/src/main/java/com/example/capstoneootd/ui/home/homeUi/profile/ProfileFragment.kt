@@ -6,10 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneootd.R
+import com.example.capstoneootd.data.repository.ViewModelFactory
 import com.example.capstoneootd.databinding.FragmentProfileBinding
+import com.example.capstoneootd.ui.home.homeUi.clothes.ClothesViewModel
+import com.example.capstoneootd.ui.signIn.SignInViewModel
 
 
 class ProfileFragment : Fragment(), View.OnClickListener {
@@ -23,8 +28,12 @@ class ProfileFragment : Fragment(), View.OnClickListener {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
         val cardView: CardView = view.findViewById(R.id.cardview_toDetail)
         cardView.setOnClickListener(this)
+
+
 
 
     }
@@ -32,5 +41,6 @@ class ProfileFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         startActivity(Intent(activity?.baseContext, DetailProfile::class.java))
     }
+
 
 }
