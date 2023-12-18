@@ -20,8 +20,8 @@
         android:src="@drawable/baseline_photo_camera" />
 
 
-
     <TextView
+        android:id="@+id/tv_tips"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Photo Tips"
@@ -33,6 +33,7 @@
         />
 
         <TextView
+            android:id="@+id/tv_tips_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/tpis"
