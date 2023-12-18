@@ -43,4 +43,13 @@
     <string name="upload_foto">Upload Photo</string>
     <string name="logout">Logout</string>
     <string name="edit">Edit Profile</string>
+    <string name="create_your_outfit">Create your outfit</string>
+    <string name="save">save clothes</string>
+    <string name="cancel">cancel</string>
+    <string name="back">back</string>
+    <string name="jacket">Jacket</string>
+    <string name="top">Top</string>
+    <string name="bottom">Bottom</string>
+    <string name="accessory">accesory</string>
+    <string name="shoes">shoses</string>
 </resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background Shape -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/purple_7" /> <!-- Warna latar belakang -->
+            <corners android:radius="8dp" /> <!-- Radius sudut -->
+        </shape>
+    </item>
+
+    <!-- Border -->
+    <item
+        android:left="6dp"
+        android:right="6dp"
+        android:top="6dp"
+        android:bottom="6dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- Warna border -->
+            <corners android:radius="8dp" /> <!-- Radius sudut, sesuaikan dengan radius latar belakang -->
+        </shape>
+    </item>
+</layer-list>

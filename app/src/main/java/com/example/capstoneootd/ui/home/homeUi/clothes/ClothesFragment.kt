@@ -26,7 +26,6 @@ class ClothesFragment : Fragment() {
 
         _binding = FragmentClothesBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
         return root
     }
 
