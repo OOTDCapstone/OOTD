@@ -9,11 +9,13 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.runBlocking
 
 
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "sesi")
 class DataStorePreference private constructor(private val dataStore: DataStore<Preferences>){
     private val TOKEN = stringPreferencesKey("token_sesi")
+//    private val ID_USER = stringPreferencesKey("user_id")
 
     fun getLoginSesi(): Flow<Boolean> {
         return dataStore.data.map {preference ->
@@ -22,10 +24,10 @@ class DataStorePreference private constructor(private val dataStore: DataStore<P
         }
     }
 
-    suspend fun saveToken(token: String){
+    suspend fun saveToken(token: String, userId: String){
         dataStore.edit{pref->
             pref[TOKEN] = token
-
+//            pref[ID_USER] = userId
         }
     }
     suspend fun getToken(): String{
@@ -36,9 +38,20 @@ class DataStorePreference private constructor(private val dataStore: DataStore<P
         return token
     }
 
+//    fun getIdUser(): String{
+//        var user_id: String = ""
+//        runBlocking {
+//            dataStore.edit {pref->
+//                user_id = pref[ID_USER] ?: ""
+//            }
+//        }
+//        return user_id
+//    }
+
     suspend fun removeLoginSession(){
         dataStore.edit {
             it.remove(TOKEN)
+//            it.remove(ID_USER)
         }
     }
 
