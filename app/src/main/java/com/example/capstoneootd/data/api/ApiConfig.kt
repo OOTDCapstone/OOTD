@@ -22,7 +22,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://api-firestore-k7nuougtea-et.a.run.app/api/")
+                .baseUrl("https://server-k7nuougtea-et.a.run.app/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

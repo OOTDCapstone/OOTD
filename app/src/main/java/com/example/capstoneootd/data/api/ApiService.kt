@@ -1,10 +1,16 @@
 package com.example.capstoneootd.data.api
 
+import com.example.capstoneootd.data.response.DataSampleResponse
+import com.example.capstoneootd.data.response.ImageUrlsByCategory
 import com.example.capstoneootd.data.response.ResponseLogin
 import com.example.capstoneootd.data.response.ResponseRegister
+import com.example.capstoneootd.data.response.SignInResponse
+import com.example.capstoneootd.data.response.SignUpResponse
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface ApiService {
     @FormUrlEncoded
@@ -13,12 +19,24 @@ interface ApiService {
         @Field("username") username: String,
         @Field("email") email: String,
         @Field("password") password: String
-    ): ResponseRegister
+    ):SignUpResponse
 
     @FormUrlEncoded
     @POST("login")
     suspend fun login(
-        @Field("username") username: String,
+        @Field("email") email: String,
         @Field("password") password: String
-    ): ResponseLogin
+    ): SignInResponse
+
+
+    @GET("get_image_urls")
+    suspend fun top(
+    ) : List<ImageUrlsByCategory>
+
+    @GET("get_image_urls")
+    suspend fun middle(
+    ): DataSampleResponse
+
+    @GET("get_image_urls")
+    suspend fun bottom(): DataSampleResponse
 }

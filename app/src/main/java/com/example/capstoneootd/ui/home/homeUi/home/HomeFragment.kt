@@ -12,16 +12,22 @@ import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneootd.R
 import com.example.capstoneootd.databinding.FragmentHomeBinding
+import com.example.capstoneootd.ui.adapter.ListAdapterTop
+import com.example.capstoneootd.ui.mashup.MashupActivity
 import org.w3c.dom.Text
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment()  {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private lateinit var listAdapterTop: ListAdapterTop
+    private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val homeViewModel =
@@ -35,6 +41,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+         val adapter = ListAdapterTop()
+        binding.rvTopHorizontal.adapter = adapter
+
+
+
         binding.ivHelper.setOnClickListener {
             val message : String? = "1. Take photos during the day or in\n" +
                     "        a bright room.\n" +
@@ -45,6 +59,9 @@ class HomeFragment : Fragment() {
                     "4. Avoid other objects in the \n" +
                     "       background."
             showCustomDialogBox(message)
+        }
+        binding.btnMashup.setOnClickListener{
+            startActivity(Intent(activity?.baseContext, MashupActivity::class.java))
         }
 
     }
@@ -71,6 +88,8 @@ class HomeFragment : Fragment() {
         }
         dialog.show()
     }
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

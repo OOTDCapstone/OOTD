@@ -38,14 +38,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:startIconDrawable="@drawable/baseline_account">
+        app:startIconDrawable="@drawable/baseline_email">
 
         <EditText
             android:id="@+id/ed_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="@string/hint_name"
+            android:hint="@string/hint_email"
             android:background="@color/light"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"

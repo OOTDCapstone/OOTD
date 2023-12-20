@@ -24,14 +24,14 @@ class SignInViewModel(private val mRepository: Repository): ViewModel() {
             mRepository.saveData(token)
         }
     }
-    fun loginAuth(username: String, password: String, context: Context) {
+    fun loginAuth(email: String, password: String, context: Context) {
         _isLoading.value = true
         viewModelScope.launch {
             try{
 
-                val successResponse = mRepository.login(username, password)
+                val successResponse = mRepository.login(email, password)
                 val message = successResponse.message
-                val token = successResponse.loginResult?.token.toString()
+                val token = successResponse.loginResults?.token.toString()
                 Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
                 _isLoading.value = false
                 saveToken(token)

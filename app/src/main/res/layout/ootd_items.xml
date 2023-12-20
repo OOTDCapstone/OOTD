@@ -19,7 +19,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/iv_data"
             android:layout_width="169dp"
             android:layout_height="167dp"
             tools:layout_editor_absoluteX="16dp"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/tv_name_items"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -38,7 +38,7 @@
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageView8"/>
+            app:layout_constraintTop_toBottomOf="@id/iv_data"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

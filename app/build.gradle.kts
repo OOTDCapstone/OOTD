@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
+//    id("com.google.devtools.ksp")
 }
 
 android {
@@ -62,7 +64,9 @@ dependencies {
 //    implementation("androidx.camera:camera-camera2:$cameraxVersion")
 //    implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
 //    implementation("androidx.camera:camera-view:$cameraxVersion")
-
+//    implementation("androidx.room:room-runtime:2.5.2")
+//    ksp("androidx.room:room-compiler:2.5.2")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 
 
 }
