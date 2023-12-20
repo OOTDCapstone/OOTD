@@ -11,12 +11,17 @@ class Repository(private val apiService: ApiService, private val preference: Dat
         return preference.getLoginSesi().asLiveData()
     }
 
-    suspend fun saveData(token: String){
-        preference.saveToken(token)
+    suspend fun saveData(token: String, userId : String){
+        preference.saveToken(token, userId)
+    }
+    fun getIdUser(): String{
+        return preference.getIdUser()
     }
     suspend fun removeData(){
         preference.removeLoginSession()
     }
+
+    suspend fun getDataUser(userId: String) = apiService.getDataUser(userId)
     suspend fun login(email: String, password: String) = apiService.login(email, password)
     suspend fun register(username: String, email: String, password: String)= apiService.register(username, email, password)
 

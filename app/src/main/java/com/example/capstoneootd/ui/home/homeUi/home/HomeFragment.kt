@@ -18,7 +18,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneootd.R
 import com.example.capstoneootd.databinding.FragmentHomeBinding
-import com.example.capstoneootd.ui.adapter.ListAdapterTop
+//import com.example.capstoneootd.ui.adapter.ListAdapterTop
 import com.example.capstoneootd.ui.mashup.MashupActivity
 import org.w3c.dom.Text
 
@@ -26,13 +26,10 @@ class HomeFragment : Fragment()  {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private lateinit var listAdapterTop: ListAdapterTop
-    private lateinit var homeViewModel: HomeViewModel
+//    private lateinit var listAdapterTop: ListAdapterTop
+//    private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         return root
@@ -43,9 +40,9 @@ class HomeFragment : Fragment()  {
         super.onViewCreated(view, savedInstanceState)
 
 
-         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-         val adapter = ListAdapterTop()
-        binding.rvTopHorizontal.adapter = adapter
+//         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+//         val adapter = ListAdapterTop()
+//        binding.rvTopHorizontal.adapter = adapter
 
 
 

@@ -19,9 +19,9 @@ class SignInViewModel(private val mRepository: Repository): ViewModel() {
         return mRepository.getIsLogin()
     }
 
-    fun saveToken(token: String){
+    fun saveToken(token: String, userId : String){
         viewModelScope.launch {
-            mRepository.saveData(token)
+            mRepository.saveData(token, userId)
         }
     }
     fun loginAuth(email: String, password: String, context: Context) {
@@ -32,9 +32,10 @@ class SignInViewModel(private val mRepository: Repository): ViewModel() {
                 val successResponse = mRepository.login(email, password)
                 val message = successResponse.message
                 val token = successResponse.loginResults?.token.toString()
+                val userId = successResponse.userId.toString()
                 Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
                 _isLoading.value = false
-                saveToken(token)
+                saveToken(token, userId)
             }catch (e: HttpException){
                 val error = e.response()?.errorBody()?.string()
                 val errorResponse = Gson().fromJson(error, ResponseLogin::class.java)

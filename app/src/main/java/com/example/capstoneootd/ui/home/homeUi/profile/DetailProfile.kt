@@ -13,11 +13,20 @@ import com.example.capstoneootd.ui.signIn.SignInViewModel
 class DetailProfile : AppCompatActivity() {
    private lateinit var binding: ActivityDetailProfileBinding
    private lateinit var signInViewModel: SignInViewModel
+   private lateinit var profileViewModel: ProfileViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
         signInViewModel = obtainViewModel(this@DetailProfile)
+        profileViewModel = obtainViewModel1(this@DetailProfile)
+        val userId = profileViewModel.getIdUser()
+        profileViewModel.getDataUser(userId, context = this)
+
+        profileViewModel.user.observe(this){
+            binding.tvNameDetail.text = it.username
+            binding.tvEmailDetail.text = it.email
+        }
 
         binding.cardviewLogout.setOnClickListener {
             signInViewModel.removeSession()
@@ -28,5 +37,8 @@ class DetailProfile : AppCompatActivity() {
     private fun obtainViewModel(activity: AppCompatActivity): SignInViewModel {
         val factory = ViewModelFactory.getInstance(activity.application)
         return ViewModelProvider(activity, factory).get(SignInViewModel::class.java)
+    }   private fun obtainViewModel1(activity: AppCompatActivity): ProfileViewModel {
+        val factory = ViewModelFactory.getInstance(activity.application)
+        return ViewModelProvider(activity, factory).get(ProfileViewModel::class.java)
     }
 }

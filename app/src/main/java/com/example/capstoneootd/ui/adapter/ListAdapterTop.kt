@@ -13,22 +13,22 @@
 //import com.example.capstoneootd.databinding.OotdItemsBinding
 //import com.example.capstoneootd.ui.items.DetailItems
 //
-//class ListAdapterTop : ListAdapter<ImageUrlsByCategory, ListAdapterTop.MyViewHolder>(DIFF_CALLBACK) {
+//class ListAdapterTop : ListAdapter<Topdummy, ListAdapterTop.MyViewHolder>(DIFF_CALLBACK) {
 //
 //    companion object {
-//        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ImageUrlsByCategory>() {
-//            override fun areItemsTheSame(oldItem: ImageUrlsByCategory, newItem: ImageUrlsByCategory): Boolean {
+//        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Topdummy>() {
+//            override fun areItemsTheSame(oldItem: Topdummy, newItem: Topdummy): Boolean {
 //                return oldItem == newItem
 //            }
 //
-//            override fun areContentsTheSame(oldItem: ImageUrlsByCategory, newItem: ImageUrlsByCategory): Boolean {
+//            override fun areContentsTheSame(oldItem:Topdummy, newItem: Topdummy): Boolean {
 //                return oldItem == newItem
 //            }
 //        }
 //    }
 //
 //    class MyViewHolder(val binding: OotdItemsBinding) : RecyclerView.ViewHolder(binding.root) {
-//        fun bind(item: ImageUrlsByCategory) {
+//        fun bind(item: Topdummy) {
 //            binding.tvNameItems.text = item.name
 //            Glide.with(itemView.context)
 //                .load(item.photo)
