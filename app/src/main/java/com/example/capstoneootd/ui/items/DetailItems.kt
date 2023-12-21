@@ -27,15 +27,16 @@ class DetailItems : AppCompatActivity() {
             showPopup()
         }
     }
-    private fun showPopup(){
+    private fun showPopup() {
         val dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.layout_popup_delete_items)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        val btnDelete: Button = findViewById(R.id.btnDelete)
-        val btnCancel: Button = findViewById(R.id.btnCancel)
+        // Use findViewById on the dialog's view
+        val btnDelete: Button = dialog.findViewById(R.id.btnDelete)
+        val btnCancel: Button = dialog.findViewById(R.id.btnCancel)
 
         val window = dialog.window
         val layoutParams = window?.attributes

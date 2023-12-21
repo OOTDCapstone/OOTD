@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.capstoneootd.data.di.DataInjection
+import com.example.capstoneootd.ui.home.homeUi.home.HomeViewModel
 import com.example.capstoneootd.ui.home.homeUi.profile.ProfileViewModel
 import com.example.capstoneootd.ui.signIn.SignInViewModel
 import com.example.capstoneootd.ui.signUp.SignUpViewModel
@@ -23,7 +24,8 @@ class ViewModelFactory private constructor(private val mRepository: Repository):
             return SignUpViewModel(mRepository) as T
         } else if (modelClass.isAssignableFrom(ProfileViewModel::class.java)) {
             return ProfileViewModel(mRepository)as T
-
+        }else if (modelClass.isAssignableFrom(HomeViewModel::class.java)){
+            return HomeViewModel(mRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
     }

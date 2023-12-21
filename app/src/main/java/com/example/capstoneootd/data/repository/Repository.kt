@@ -25,13 +25,12 @@ class Repository(private val apiService: ApiService, private val preference: Dat
     suspend fun login(email: String, password: String) = apiService.login(email, password)
     suspend fun register(username: String, email: String, password: String)= apiService.register(username, email, password)
 
-    suspend fun getTop() : List<ImageUrlsByCategory>{
-       return apiService.top()
-    }
+    suspend fun getTop() = apiService.top()
 
-    suspend fun middle() = apiService.middle()
 
-    suspend fun bottom() = apiService.bottom()
+    suspend fun getMiddle() = apiService.middle()
+
+    suspend fun getBottom() = apiService.bottom()
 
     companion object{
         fun getInstance( apiService: ApiService, preference: DataStorePreference): Repository = Repository(apiService,preference)

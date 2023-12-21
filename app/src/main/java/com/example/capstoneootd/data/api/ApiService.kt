@@ -1,7 +1,7 @@
 package com.example.capstoneootd.data.api
 
-import com.example.capstoneootd.data.response.DataSampleResponse
 import com.example.capstoneootd.data.response.ImageUrlsByCategory
+import com.example.capstoneootd.data.response.ResponseSample
 import com.example.capstoneootd.data.response.SignInResponse
 import com.example.capstoneootd.data.response.SignUpResponse
 import com.example.capstoneootd.data.response.UserIdResponse
@@ -36,12 +36,12 @@ interface ApiService {
 
     @GET("get_image_urls")
     suspend fun top(
-    ) : List<ImageUrlsByCategory>
+    ) : ResponseSample
 
     @GET("get_image_urls")
     suspend fun middle(
-    ): DataSampleResponse
+    ): ResponseSample
 
     @GET("get_image_urls")
-    suspend fun bottom(): DataSampleResponse
+    suspend fun bottom(): ResponseSample
 }

@@ -7,7 +7,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.capstoneootd.data.repository.Repository
-import com.example.capstoneootd.data.response.DataSampleResponse
 import com.example.capstoneootd.data.response.SignInResponse
 import com.example.capstoneootd.data.response.User
 import com.example.capstoneootd.data.response.UserIdResponse
