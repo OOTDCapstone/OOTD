@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_1"
+    android:layout_marginBottom="72dp"
     tools:context=".ui.home.homeUi.clothes.ClothesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/title_myoutfit"
@@ -92,16 +97,41 @@
     app:layout_constraintEnd_toEndOf="parent"
     />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_jenis_horizontal"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="12dp"
-        android:scrollbars="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView7"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView7">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_toper_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:scrollbars="horizontal"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_mid_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:scrollbars="horizontal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bott_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:scrollbars="horizontal"
+        />
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

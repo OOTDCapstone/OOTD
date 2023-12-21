@@ -1,20 +1,26 @@
 package com.example.capstoneootd.ui.items
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.Button
+import com.bumptech.glide.Glide
 import com.example.capstoneootd.R
+import com.example.capstoneootd.data.response.TopRowItem
 import com.example.capstoneootd.databinding.ActivityDetailItemsBinding
+import com.example.capstoneootd.ui.home.HomeActivity
 
 class DetailItems : AppCompatActivity() {
 
     companion object{
-        val ITEMS = "Items"
+        const val ITEM_IMAGE_URL = "itemImageUrl"
+        const val ITEM_CLOTHING_TYPE = "itemClothingType"
     }
 
     private lateinit var binding: ActivityDetailItemsBinding
@@ -23,6 +29,22 @@ class DetailItems : AppCompatActivity() {
         binding = ActivityDetailItemsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val imageUrl = intent.getStringExtra(ITEM_IMAGE_URL)
+        val clothingType = intent.getStringExtra(ITEM_CLOTHING_TYPE)
+
+        if (imageUrl != null) {
+            Glide.with(this)
+                .load(imageUrl)
+                .into(binding.imDetailphoto)
+            binding.tvCategory.text = clothingType
+        }
+
+
+        binding.ivBack.setOnClickListener {
+            startActivity(
+                Intent(this@DetailItems, HomeActivity::class.java)
+            )
+        }
         binding.deleteItems.setOnClickListener {
             showPopup()
         }
@@ -51,4 +73,6 @@ class DetailItems : AppCompatActivity() {
         }
         dialog.show()
     }
+
+
 }

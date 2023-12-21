@@ -37,8 +37,10 @@ class ListAdapterTop : ListAdapter<TopRowItem, ListAdapterTop.MyViewHolder>(DIFF
 
             binding.userItem.setOnClickListener {
                 val intent = Intent(itemView.context, DetailItems::class.java)
-                intent.putExtra(DetailItems.ITEMS, item.clothingType)
+                intent.putExtra(DetailItems.ITEM_IMAGE_URL, item.imageUrl)
+                intent.putExtra(DetailItems.ITEM_CLOTHING_TYPE, item.clothingType)
                 itemView.context.startActivity(intent)
+
             }
         }
     }

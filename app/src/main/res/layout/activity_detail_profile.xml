@@ -5,7 +5,7 @@
     android:id="@+id/detailContrainers"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_4"
+    android:background="@color/white"
     tools:context=".ui.home.homeUi.profile.DetailProfile">
 
     <ImageView
@@ -173,6 +173,16 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
     </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="18dp"
+        app:srcCompat="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
 

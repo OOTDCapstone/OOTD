@@ -1,6 +1,8 @@
 package com.example.capstoneootd.data.response
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class ResponseSample(
 
@@ -38,6 +40,7 @@ data class BottomRowItem(
 	val clothingType: String? = null
 )
 
+@Parcelize
 data class TopRowItem(
 
 	@field:SerializedName("imageUrl")
@@ -45,4 +48,4 @@ data class TopRowItem(
 
 	@field:SerializedName("clothingType")
 	val clothingType: String? = null
-)
+): Parcelable

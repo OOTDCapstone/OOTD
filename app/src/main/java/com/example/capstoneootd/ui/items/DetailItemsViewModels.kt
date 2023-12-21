@@ -1,4 +1,8 @@
 package com.example.capstoneootd.ui.items
 
-class DetailItemsViewModels {
+import androidx.lifecycle.ViewModel
+
+class DetailItemsViewModels: ViewModel() {
+
+
 }
