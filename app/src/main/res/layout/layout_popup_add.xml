@@ -27,12 +27,13 @@
             android:id="@+id/tvMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_message"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/add_message"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:layout_marginTop="8dp"
             android:textStyle="bold" />
+
         <LinearLayout
             android:gravity="center"
             android:layout_marginTop="30dp"

@@ -48,8 +48,8 @@
             android:ems="10"
             android:hint="@string/hint_name"
             android:background="@color/light"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
             android:inputType="text"
             tools:ignore="SpeakableTextPresentCheck"/>
 
@@ -73,8 +73,8 @@
             android:ems="10"
             android:hint="@string/hint_email"
             android:background="@color/light"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
             android:inputType="textEmailAddress"
             tools:ignore="SpeakableTextPresentCheck"/>
 
@@ -99,8 +99,8 @@
             android:ems="10"
             android:hint="@string/hint_password"
             android:background="@color/light"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
             android:inputType="textPassword"
             tools:ignore="SpeakableTextPresentCheck"/>
 
@@ -109,10 +109,10 @@
     <Button
         android:id="@+id/btn_signup"
         android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="32dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="64dp"
         android:backgroundTint="@color/purple_7"
         android:text="@string/btn_signOut"
         android:textSize="20sp"

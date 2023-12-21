@@ -2,8 +2,6 @@ package com.example.capstoneootd.data.api
 
 import com.example.capstoneootd.data.response.DataSampleResponse
 import com.example.capstoneootd.data.response.ImageUrlsByCategory
-import com.example.capstoneootd.data.response.ResponseLogin
-import com.example.capstoneootd.data.response.ResponseRegister
 import com.example.capstoneootd.data.response.SignInResponse
 import com.example.capstoneootd.data.response.SignUpResponse
 import com.example.capstoneootd.data.response.UserIdResponse

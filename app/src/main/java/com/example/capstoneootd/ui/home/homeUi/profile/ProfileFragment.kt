@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.example.capstoneootd.R
 import com.example.capstoneootd.data.repository.ViewModelFactory
 import com.example.capstoneootd.databinding.FragmentHomeBinding
@@ -48,6 +49,13 @@ class ProfileFragment : Fragment(), View.OnClickListener {
 
         val userId = profileViewModel.getIdUser()
         profileViewModel.getDataUser(userId, context = requireContext())
+
+
+        val imageUrl = "https://i.pinimg.com/originals/c9/e3/e8/c9e3e810a8066b885ca4e882460785fa.jpg"
+
+        Glide.with(this)
+            .load(imageUrl)
+            .into(binding.tvProfilePhoto)
 
         profileViewModel.user.observe(requireActivity()){
             binding.tvNameProfile.text = it.username

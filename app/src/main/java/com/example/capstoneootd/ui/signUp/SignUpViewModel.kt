@@ -8,7 +8,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.capstoneootd.data.repository.Repository
-import com.example.capstoneootd.data.response.ResponseRegister
+import com.example.capstoneootd.data.response.SignUpResponse
 import com.example.capstoneootd.ui.signIn.SignInActivity
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
@@ -29,7 +29,7 @@ class SignUpViewModel(private val mRepository: Repository): ViewModel() {
 
             }catch (e: HttpException){
                 val error = e.response()?.errorBody()?.string()
-                val errorResponse = Gson().fromJson(error, ResponseRegister::class.java)
+                val errorResponse = Gson().fromJson(error, SignUpResponse::class.java)
                 Toast.makeText(context,errorResponse.message.toString(), Toast.LENGTH_SHORT).show()
                 _isLoading.value = false
 

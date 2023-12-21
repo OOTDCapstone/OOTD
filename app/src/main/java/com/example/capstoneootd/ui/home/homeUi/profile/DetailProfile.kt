@@ -4,11 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import com.example.capstoneootd.R
 import com.example.capstoneootd.data.repository.ViewModelFactory
 import com.example.capstoneootd.databinding.ActivityDetailProfileBinding
 import com.example.capstoneootd.ui.signIn.SignInActivity
 import com.example.capstoneootd.ui.signIn.SignInViewModel
+
+
 
 class DetailProfile : AppCompatActivity() {
    private lateinit var binding: ActivityDetailProfileBinding
@@ -27,6 +32,11 @@ class DetailProfile : AppCompatActivity() {
             binding.tvNameDetail.text = it.username
             binding.tvEmailDetail.text = it.email
         }
+        val imageUrl = "https://i.pinimg.com/originals/c9/e3/e8/c9e3e810a8066b885ca4e882460785fa.jpg"
+
+        Glide.with(this)
+            .load(imageUrl)
+            .into(binding.ivPotoProfile)
 
         binding.cardviewLogout.setOnClickListener {
             signInViewModel.removeSession()

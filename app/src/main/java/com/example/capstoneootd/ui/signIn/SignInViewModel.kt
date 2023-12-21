@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.capstoneootd.data.repository.Repository
-import com.example.capstoneootd.data.response.ResponseLogin
+import com.example.capstoneootd.data.response.SignInResponse
 import com.google.gson.Gson
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
@@ -38,7 +38,7 @@ class SignInViewModel(private val mRepository: Repository): ViewModel() {
                 saveToken(token, userId)
             }catch (e: HttpException){
                 val error = e.response()?.errorBody()?.string()
-                val errorResponse = Gson().fromJson(error, ResponseLogin::class.java)
+                val errorResponse = Gson().fromJson(error, SignInResponse::class.java)
                 Toast.makeText(context,errorResponse.message.toString(), Toast.LENGTH_SHORT).show()
                 _isLoading.value = false
             }
