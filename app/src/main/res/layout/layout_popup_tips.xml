@@ -53,7 +53,7 @@
             android:text="OKE"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:backgroundTint="@color/purple_1"
+            android:backgroundTint="@color/purple_7"
             />
     </LinearLayout>
 

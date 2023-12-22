@@ -135,6 +135,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/save"
+        android:backgroundTint="@color/purple_7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/buttonCancel"
         app:layout_constraintBottom_toBottomOf="parent" />
@@ -145,6 +146,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/cancel"
+        android:backgroundTint="@color/purple_7"
         app:layout_constraintStart_toEndOf="@id/buttonSave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

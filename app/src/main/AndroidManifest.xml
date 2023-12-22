@@ -18,6 +18,9 @@
         android:theme="@style/Theme.CapstoneOOTD"
         tools:targetApi="31">
         <activity
+            android:name=".ui.mashup.OutfitActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.signIn.SignInActivity"
             android:exported="false" />
         <activity

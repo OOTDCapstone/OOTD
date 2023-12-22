@@ -56,7 +56,7 @@ class DetailItems : AppCompatActivity() {
         dialog.setContentView(R.layout.layout_popup_delete_items)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        // Use findViewById on the dialog's view
+
         val btnDelete: Button = dialog.findViewById(R.id.btnDelete)
         val btnCancel: Button = dialog.findViewById(R.id.btnCancel)
 
