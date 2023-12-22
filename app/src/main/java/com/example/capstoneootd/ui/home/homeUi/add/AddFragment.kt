@@ -2,6 +2,7 @@ package com.example.capstoneootd.ui.home.homeUi.add
 
 import android.Manifest
 import android.app.Dialog
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -21,6 +22,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.bayustoryapp.data.Utils.Utils.getImageUri
 import com.example.capstoneootd.R
 import com.example.capstoneootd.databinding.FragmentAddBinding
+import com.example.capstoneootd.ui.home.homeUi.profile.DetailProfile
+import com.example.capstoneootd.ui.mashup.UploadActivity
 
 
 class AddFragment : Fragment() {
@@ -51,6 +54,9 @@ class AddFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.cameraButton.setOnClickListener {
             showPopup()
+        }
+        binding.uploadButton.setOnClickListener {
+            startActivity(Intent(activity?.baseContext, UploadActivity::class.java))
         }
     }
 
@@ -113,6 +119,7 @@ class AddFragment : Fragment() {
     private fun showImage() {
         currentImageUri?.let {uri ->
            binding.previewImageView.setImageURI(uri)
+
         }
     }
 
